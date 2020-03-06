@@ -1,0 +1,34 @@
+{
+  "name": "desafio-luizalabs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "pg": "^7.18.2",
+    "sequelize": "^5.21.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.3",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "sequelize-cli": "^5.5.1"
+  },
+  "scripts": {
+    "test": "jest",
+    "migration:create": "sequelize migration:create --name",
+    "migrate:run": "sequelize db:migrate",
+    "migrate:undo": "sequelize db:migrate:undo:all",
+    "seed:create": "sequelize seed:create --name",
+    "seeds:run": "sequelize db:seed:all",
+    "seeds:undo": "sequelize db:seed:undo:all",
+    "start": "node src/index.js",
+    "start:dev": "nodemon src/index.js",
+    "container:up": "docker-compose up -d",
+    "container:down": "docker-compose stop"
+  }
+}
